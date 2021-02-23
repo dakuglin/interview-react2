@@ -26,16 +26,16 @@ GitHub Profile: (https://github.com/dakuglin)
 
 Please email me with additional questions at dakuglin@gmail.com
 
-## Pseduo Code
+## Pseudo Code
 
 Need to capture the time spent on a given activity.
 
 Column 1 -
 Activity input box where user can add activity description.
-Next to or below descrption will be a "start activity" button
+Next to or below description will be a "start activity" button
 
 - When "start" button is clicked, given time is recorded for specific activity in column 2
-- When "start" button is clicked, toggele button to a "stop activity" button
+- When "start" button is clicked, toggle button to a "stop activity" button
 - When "stop" button is clicked, given time is recorded for specific activity in column 3
 
 Column 2 -

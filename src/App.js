@@ -1,15 +1,12 @@
-import './App.css';
+// import './App.css';
+import { Main } from "./pages/Main";
+import 'bootstrap/dist/css/bootstrap.min.css'; //boostrap link for responsive application design
 
-function App() {
+export const App =() => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
+    <>
+      <Main />
+    </>
   );
-}
+};
 
-export default App;
