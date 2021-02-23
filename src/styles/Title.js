@@ -13,7 +13,7 @@ export const Header = styled.div` //header style
 
   p {
     text-align: center;
-    font-size: 20px;
+    font-size: 23px;
   }
   
 `;

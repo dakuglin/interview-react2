@@ -1,5 +1,7 @@
 import React from "react";
 import { Title } from "../components/Title";
+// import { Activity } from "../components/Activity";
+import { Time } from "../components/Time";
 import { Container, Row, Col } from "react-bootstrap";
 import { MainContainer } from "../styles/Main";
 
@@ -7,9 +9,10 @@ import { MainContainer } from "../styles/Main";
 export const Main = () => {
   return (
     <>
-    <Title />
+    <Title /> 
     <MainContainer>
       <Container fluid>
+      {/* <Activity /> */}
         <Row>
           <Col className="col-3">
             <h2>Description</h2>
@@ -21,10 +24,11 @@ export const Main = () => {
             <h2>End Time</h2>
           </Col>
           <Col className="col-3">
-            <h2>Duration</h2>
+            <h2>Duration [min : sec]</h2>
           </Col>
         </Row>
-    </Container>
+        <Time />
+      </Container>
     </MainContainer>
     </>
   );
