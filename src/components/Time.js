@@ -1,15 +1,15 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Row, Col, Button } from "react-bootstrap";
 
 //component that will track the time for activities
-export const Time = () => {
+export const Time = (props) => {
 
   //difine state using react hooks
   const [seconds, setSeconds] = useState('00');
   const [minuets, setMinutes] = useState('00');
   const [count, setCount] = useState(0);
   const [isActive, setIsActive] = useState(false);
-  const [time, setTime] = useState('');
+  
 
   useEffect(() => { //useEffect for application timer
     var interval = null;
@@ -38,6 +38,8 @@ export const Time = () => {
   };
 
  /////////////////////////////////////////////////////////////////////////
+  
+  const [time, setTime] = useState('');
 
   function handler() {
     const timeStamp = new Date();
@@ -49,8 +51,16 @@ export const Time = () => {
     document.addEventListener("click", handler);
   }, []);
 
+  /////////////////////////////////////////////////////////////////////////
+
+  
+
   return (
     <>
+    <Row>
+      <Col>
+      </Col>
+    </Row>
     <Row>
       <Col className="col-3"> {/* column 1 - description */}
         <div>
@@ -74,6 +84,7 @@ export const Time = () => {
         </div>
       </Col>
     </Row>
+    <div>{props.descriptios}</div>
     </>
   );
 };
