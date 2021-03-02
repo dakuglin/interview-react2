@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { Container } from "react-bootstrap";
+import { ActivityContainer } from "../styles/StartActivity";
+import { Container, Row, Col, Button } from "react-bootstrap";
 
 
 function CreatActivity({ addActivity }) { //handles the creating of a new activity by the user
 
+    //define state using react hooks
   const [value, setValue] = useState("");
 
   const handleSubmit = (e) => {
@@ -31,11 +33,19 @@ function CreatActivity({ addActivity }) { //handles the creating of a new activi
 ///////////////////////////////////////////////
 
 function Description({ description }) {
+
+  var startTime = new Date();
   return (
     <>
+    <br />
     <div>
       {description.userActivity}
-      <button onClick={() => (console.log("starting activity"))}>Start Activity</button>
+      <br />
+      <Button onClick={() => 
+        console.log(startTime)}>
+          Start
+      </Button>
+      <Button onClick={() => (console.log("stopping activity"))}>Stop</Button>
     </div>
     </>
   );
@@ -44,33 +54,51 @@ function Description({ description }) {
 
 export const StartActivity = () => {
 
+  //define state using react hooks
   const [descriptions, setDescriptions] = useState([
     {
       userActivity: 'Swimming',
       started: false
     },
-    
   ]);
 
   const addActivity = userActivity => {
     const newActivity = [...descriptions, {userActivity, started: false}];
     setDescriptions(newActivity);
-  }
+  };
 
   return (
     <>
-    <Container>
+    <ActivityContainer>
+    <Container fluid>
       <CreatActivity addActivity={addActivity}/>
-      <div>
-      {descriptions.map((description, index) => (
-        <Description 
-          description={description}
-          index={index}
-          key={index}
-        />
-        ))}
-      </div>
+      <br />
+      <br />
+      <Row>
+        <Col className="col-3"> {/* column 1 - description */}
+          <h2>Description</h2>
+          <div>
+            {descriptions.map((description, index) => (
+              <Description 
+                description={description}
+                index={index}
+                key={index}
+              />
+            ))}
+          </div>
+        </Col>
+        <Col className="col-3"> {/* column 2 - start time */}
+          <h2>Start Time</h2>
+        </Col>
+        <Col className="col-3"> {/* column 3 - end time */}
+          <h2>End Time</h2>
+        </Col>
+        <Col className="col-3"> {/* column  - duration */}
+          <h2>Duration [min : sec]</h2>
+        </Col>
+      </Row>
     </Container>
+    </ActivityContainer>
     </>
   );
 };

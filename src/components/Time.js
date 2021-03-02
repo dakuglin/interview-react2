@@ -4,7 +4,7 @@ import { Row, Col, Button } from "react-bootstrap";
 //component that will track the time for activities
 export const Time = (props) => {
 
-  //difine state using react hooks
+  //define state using react hooks
   const [seconds, setSeconds] = useState('00');
   const [minuets, setMinutes] = useState('00');
   const [count, setCount] = useState(0);
@@ -53,8 +53,6 @@ export const Time = (props) => {
 
   /////////////////////////////////////////////////////////////////////////
 
-  
-
   return (
     <>
     <Row>
@@ -65,7 +63,7 @@ export const Time = (props) => {
       <Col className="col-3"> {/* column 1 - description */}
         <div>
           <Button onClick={() => setIsActive(!isActive)} className="start">
-            {isActive ? "Stop" : "Start"}
+            {/* {isActive ? "Stop" : "Start"} */} Start
           </Button>
           <Button onClick={stopTime} className="stop">Stop</Button>
         </div>

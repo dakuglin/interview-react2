@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const DescriptionContainer = styled.div` //main container styling
+export const ActivityContainer = styled.div` //main container styling
   margin: 20px;
 
   .col-3 { 
