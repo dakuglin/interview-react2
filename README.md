@@ -2,14 +2,16 @@
 
 ## Description
 
+Build an app with a clock in/ clock out panel that works in two modes.
+
+Start an activity, and stop an activity. User can add an activity and start a timer for the given activity. The user can then stop the activity and record the time elapsed.
+
 ## Table of Contents
 
-- [Video](#video)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Questions](#questions)
-
-## Video
+- [Pseudo_code](#pseudo_code)
 
 ## Installation
 
@@ -26,7 +28,7 @@ GitHub Profile: (https://github.com/dakuglin)
 
 Please email me with additional questions at dakuglin@gmail.com
 
-## Pseudo Code
+## Pseudo_code
 
 Need to capture the time spent on a given activity.
 
